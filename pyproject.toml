@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trello_card_cli"
+version = "1.0.0"
+authors = [
+    {name = "Bryan Wodi", email = "bryan.wodi@local.git"},
+]
+description = "trello_card_cli is a command line tool for creating trello cards"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
