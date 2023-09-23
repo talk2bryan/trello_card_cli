@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+trello-card-cli = {editable = true, path = "."}
+
+[dev-packages]
+pytest = "*"
+flake8 = "*"
+isort = "*"
+pycln = "*"
+black = "*"
+mypy = "*"
+pre-commit = "*"
+
+[requires]
+python_version = "3.10"
