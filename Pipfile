@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 trello-card-cli = {editable = true, path = "."}
+requests = "*"
+types-requests = "*"
 
 [dev-packages]
 pytest = "*"
