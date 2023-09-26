@@ -42,7 +42,6 @@ def init_parser() -> argparse.ArgumentParser:
         will use the TRELLO_LIST_ID environment variable.""",
     )
 
-    subparser.add_parser("del", help="Del a card to a Trello list/column")
     return parser
 
 
