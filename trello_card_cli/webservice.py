@@ -50,18 +50,24 @@ def send_request(path: str, method: str, params: dict) -> dict:
         raise IOError(f"Unknown error: {error}") from error
 
 
-def create_trello_card(list_id: str, labels: list[str], comment: str, name: str) -> str:
+def create_trello_card(
+    name: str,
+    comment: str,
+    labels: list[str],
+    list_id: str | None = None,
+) -> str:
     """Create a Trello card.
 
     Args:
-        list_id (str): The ID of the list (column) to add the card to.
-        labels (list[str]): The labels to add to the card.
-        comment (str): The comment (description) to add to the card.
         name (str): The name of the card.
+        comment (str): The comment (description) to add to the card.
+        labels (list[str]): The labels to add to the card.
+        list_id (str, optional): The ID of the list/column to add the card to. Defaults to None.
 
     Returns:
         str: The ID of the created card.
     """
+    list_id = list_id if list_id else os.environ.get("TRELLO_LIST_ID")
     path = "/cards"
     method = "POST"
     params = {
