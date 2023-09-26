@@ -80,7 +80,8 @@ def create_trello_card(
     }
     try:
         data = send_request(path=path, method=method, params=params)
-        return data["id"]
+        success_response = f"Created card with ID: {data['id']}"
+        return success_response
 
     except (KeyError, ValueError, IOError) as error:
         return f"Could not create card: {error}"

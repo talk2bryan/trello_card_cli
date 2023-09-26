@@ -63,7 +63,7 @@ def test_create_trello_card_one_label():
         response = create_trello_card(
             list_id="test", labels=["test"], comment="test", name="test"
         )
-        assert response == "test"
+        assert response == "Created card with ID: test"
         mock_send_request.assert_called_once_with(
             path="/cards",
             method="POST",
@@ -85,7 +85,7 @@ def test_create_trello_card_multiple_labels():
         response = create_trello_card(
             list_id="test", labels=["test", "test2"], comment="test", name="test"
         )
-        assert response == "test"
+        assert response == "Created card with ID: test"
         mock_send_request.assert_called_once_with(
             path="/cards",
             method="POST",
