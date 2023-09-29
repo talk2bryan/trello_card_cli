@@ -7,7 +7,7 @@ official documentation](https://developer.atlassian.com/cloud/trello/rest/api-gr
 
 ### Technologies
 - Python version 3.10
-- [Pipenv](https://pipenv.pypa.io/en/latest/#install-pipenv-today)
+- Pipenv
 
 ### Project organization
 ```
@@ -42,7 +42,7 @@ official documentation](https://developer.atlassian.com/cloud/trello/rest/api-gr
 `trello_card_cli/`: Contains the main source code for the CLI application. `__main__.py` is the entry point for the application.
 
 ### First time set up?
-- Install pipenv by following the URL above
+- [Install pipenv](https://pipenv.pypa.io/en/latest/#install-pipenv-today)
 - The following must be run from this directory
 `cat .python-version | xargs pipenv --python`
 `pipenv install --dev`
@@ -58,5 +58,10 @@ official documentation](https://developer.atlassian.com/cloud/trello/rest/api-gr
 ### License Information
 You may view this repository, and talk about it. See LICENSE for more.
 
-### Status
-The application is currently in a functional state. Its only capability is adding trello cards to a pre-existing board, where the ID of the column of the board is provided by the user.
+### Status and Roadmap
+The application is currently in a functional state. Its only capability is adding trello cards to a pre-existing board, where the ID of the column of the board is provided by the user. The project roadmap includes adding new operations like deleting a card, updating a card and searching for a card.
+
+### Development Time
+Sketching out the project and layout: 1 hour
+Coding time: 1 hour
+Testing and documentation: 2 hours
